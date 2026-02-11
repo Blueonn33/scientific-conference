@@ -1,0 +1,29 @@
+.custom-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent !important;
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+}
+.container-logo {
+  background-color: white;
+  border: 3px solid #54456b;
+  border-radius: 300px;
+}
+.flex-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.home-image-container {
+  position: relative;
+  text-align: center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
