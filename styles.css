@@ -27,3 +27,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.grid-cards {
+  display: flex;
+  justify-content: center;
+}
+.grid-card-link {
+  text-decoration: none;
+}
+.invitation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
