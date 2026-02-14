@@ -10,7 +10,8 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link href="styles/register-styles.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -70,9 +71,110 @@
         </div>
       </div>
     </nav>
-    <section>
-      <div class="home-image-container">
-        <img src="images/home-background.jpg" class="img-fluid" />
+    <section class="register-wrapper">
+      <div class="centered">
+        <!-- <img src="images/home-background.jpg" class="img-fluid" /> -->
+        <section class="">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-white"
+              >Име, презиме, фамилия на автор(и)</label
+            >
+            <input
+              type="text"
+              class="form-control my-1"
+              id="exampleFormControlInput1"
+            />
+            <input
+              type="text"
+              class="form-control my-1"
+              id="exampleFormControlInput1"
+            />
+            <input
+              type="text"
+              class="form-control my-1"
+              id="exampleFormControlInput1"
+            />
+          </div>
+          <div class="mb-3">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Статут на участника</option>
+              <option value="1">студент-бакалавър</option>
+              <option value="2">студент-магистър</option>
+              <option value="3">докторант</option>
+              <option value="4">млад учен</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-white"
+              >Специалност</label
+            >
+            <input
+              type="text"
+              class="form-control my-1"
+              id="exampleFormControlInput1"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-white"
+              >Учебна институция</label
+            >
+            <input
+              type="text"
+              class="form-control my-1"
+              id="exampleFormControlInput1"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-white"
+              >Тема на научния доклад</label
+            >
+            <input
+              type="text"
+              class="form-control my-1"
+              id="exampleFormControlInput1"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-white"
+              >Научен консултант</label
+            >
+            <input
+              type="text"
+              class="form-control my-1"
+              id="exampleFormControlInput1"
+            />
+          </div>
+          <div class="mb-3">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Тематично направление</option>
+              <option value="1">Информатика и компютърни науки</option>
+              <option value="2">Математика и приложна математика</option>
+              <option value="3">Обучение по математика и информатика</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label
+              for="exampleFormControlTextarea1"
+              class="form-label text-light"
+              >Резюме на научния доклад</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-white"
+              >Необходим софтуерен продукт за представяне на доклада</label
+            >
+            <input
+              type="text"
+              class="form-control my-1"
+              id="exampleFormControlInput1"
+            />
+          </div>
+        </section>
       </div>
     </section>
     <footer class="text-center text-lg-start" style="background-color: #858585">
