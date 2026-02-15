@@ -39,6 +39,10 @@
   z-index: 2;
 }
 
+.awards-judge-heading {
+  text-align: center;
+}
+
 @media (max-width: 1500px) {
   .centered-top {
     top: 15%;
@@ -98,7 +102,7 @@
   }
 
   .awards-judge-container {
-    bottom: 20%;
+    bottom: 15%;
     width: 95%;
     padding: 1rem;
   }
