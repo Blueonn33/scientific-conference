@@ -3,35 +3,41 @@ body {
 }
 
 .regulation {
-  height: 50vh;
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .regulation-image {
-  height: inherit;
-  object-fit: initial;
+  position: absolute;
+  inset: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.centered-top {
+  position: relative;
+  width: 70%;
+  max-width: 1000px;
+  z-index: 2;
 }
 
 .regulation-container .list-group {
   text-align: left;
-  margin-top: 15%;
   width: 100%;
 }
 
 .table-regulation ol {
   list-style-type: none;
+  padding-left: 0;
   text-align: left;
 }
 
 .table-regulation td {
   text-align: left;
-}
-
-.centered-top {
-  width: 70%;
-  margin: auto;
-  margin-top: -27%;
-  position: relative;
 }
 
 thead {
@@ -40,26 +46,63 @@ thead {
 
 @media (max-width: 1200px) {
   .centered-top {
-    width: 85%;
-    margin-top: -10%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 80%;
   }
 }
 
 @media (max-width: 992px) {
   .centered-top {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .regulation {
+    min-height: 50vh;
+    padding: 2rem 0;
+  }
+
+  .centered-top {
     width: 90%;
-    margin-top: 0;
-    top: 48%;
   }
 }
 
 @media (max-width: 576px) {
+  .regulation {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .regulation-image {
+    height: 100%;
+  }
+
   .centered-top {
     width: 95%;
-    top: 45%;
+    margin-top: 10%;
+  }
+
+  .list-group-item {
+    font-size: 0.95rem;
+  }
+
+  .table-regulation td,
+  .table-regulation th {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .centered-top {
+    width: 95%;
+  }
+
+  .list-group-item {
+    font-size: 0.9rem;
+  }
+
+  .table-regulation td,
+  .table-regulation th {
+    font-size: 0.85rem;
   }
 }
