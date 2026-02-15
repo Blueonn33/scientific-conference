@@ -1,26 +1,24 @@
 body {
   background-color: #736699;
 }
-.awards {
+.regulation {
   height: 50vh;
 }
-.awards-image {
+.regulation-image {
   height: inherit;
   object-fit: initial;
   width: 100%;
 }
-.table-awards {
-}
-.list-group {
+.regulation-container .list-group {
   text-align: left;
   margin-top: 15%;
   width: 100%;
 }
-.table-awards ol {
+.table-regulation ol {
   list-style-type: none;
   text-align: left;
 }
-.table-awards td {
+.table-regulation td {
   text-align: left;
 }
 .centered-top {
