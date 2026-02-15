@@ -1,0 +1,19 @@
+.centered {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  width: 75%;
+}
+.home-image-container {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  height: auto;
+}
+.home-image-container img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
