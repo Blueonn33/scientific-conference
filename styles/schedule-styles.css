@@ -20,3 +20,15 @@
 table td:first-child {
   white-space: nowrap;
 }
+table td:nth-child(even) {
+  color: white;
+  font-weight: bold;
+  border: 5px solid white;
+  background-color: #736699 !important;
+}
+table td:nth-child(odd) {
+  color: #736699;
+  font-weight: bold;
+  background-color: white;
+  border: 5px solid #736699;
+}

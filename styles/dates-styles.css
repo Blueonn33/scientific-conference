@@ -20,3 +20,13 @@
   color: white;
   width: 75%;
 }
+.table-white td {
+  color: #736699;
+  font-weight: bold;
+  border: 5px solid #736699;
+}
+.table-white th {
+  background-color: #736699;
+  color: white;
+  border: 5px solid white;
+}
