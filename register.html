@@ -74,107 +74,123 @@
     <section class="register-wrapper">
       <div class="centered">
         <!-- <img src="images/home-background.jpg" class="img-fluid" /> -->
-        <section class="">
+        <form id="contactForm">
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label text-white"
+            <label for="name" class="form-label text-white"
               >Име, презиме, фамилия на автор(и)</label
             >
             <input
               type="text"
               class="form-control my-1"
-              id="exampleFormControlInput1"
+              id="first-name"
+              required
             />
             <input
               type="text"
               class="form-control my-1"
-              id="exampleFormControlInput1"
+              id="surname"
+              required
             />
             <input
               type="text"
               class="form-control my-1"
-              id="exampleFormControlInput1"
+              id="last-name"
+              required
             />
           </div>
           <div class="mb-3">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Статут на участника</option>
-              <option value="1">студент-бакалавър</option>
-              <option value="2">студент-магистър</option>
-              <option value="3">докторант</option>
-              <option value="4">млад учен</option>
+            <select id="status" class="form-select" required>
+              <option value="" disabled selected hidden>
+                Статут на участника
+              </option>
+              <option value="bachelor">студент-бакалавър</option>
+              <option value="master">студент-магистър</option>
+              <option value="doctoral">докторант</option>
+              <option value="young-scientist">млад учен</option>
             </select>
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label text-white"
+            <label for="speciality" class="form-label text-white"
               >Специалност</label
             >
             <input
               type="text"
               class="form-control my-1"
-              id="exampleFormControlInput1"
+              id="speciality"
+              required
             />
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label text-white"
+            <label for="institution" class="form-label text-white"
               >Учебна институция</label
             >
             <input
               type="text"
               class="form-control my-1"
-              id="exampleFormControlInput1"
+              id="institution"
+              required
             />
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label text-white"
+            <label for="topic" class="form-label text-white"
               >Тема на научния доклад</label
             >
-            <input
-              type="text"
-              class="form-control my-1"
-              id="exampleFormControlInput1"
-            />
+            <input type="text" class="form-control my-1" id="topic" required />
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label text-white"
+            <label for="consultant" class="form-label text-white"
               >Научен консултант</label
             >
             <input
               type="text"
               class="form-control my-1"
-              id="exampleFormControlInput1"
+              id="consultant"
+              required
             />
           </div>
           <div class="mb-3">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Тематично направление</option>
-              <option value="1">Информатика и компютърни науки</option>
-              <option value="2">Математика и приложна математика</option>
-              <option value="3">Обучение по математика и информатика</option>
+            <select id="thematic-direction" class="form-select" required>
+              <option value="" disabled selected hidden>
+                Тематично направление
+              </option>
+              <option value="informatics-and-cs">
+                Информатика и компютърни науки
+              </option>
+              <option value="maths-and-applied-maths">
+                Математика и приложна математика
+              </option>
+              <option value="maths-and-cs-training">
+                Обучение по математика и информатика
+              </option>
             </select>
           </div>
           <div class="mb-3">
-            <label
-              for="exampleFormControlTextarea1"
-              class="form-label text-light"
+            <label for="summary" class="form-label text-light"
               >Резюме на научния доклад</label
             >
             <textarea
               class="form-control"
-              id="exampleFormControlTextarea1"
+              id="summary"
               rows="3"
+              required
             ></textarea>
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label text-white"
+            <label for="software" class="form-label text-white"
               >Необходим софтуерен продукт за представяне на доклада</label
             >
             <input
               type="text"
               class="form-control my-1"
-              id="exampleFormControlInput1"
+              id="software"
+              required
             />
           </div>
-        </section>
+          <div class="mb-5">
+            <button type="submit">Изпрати</button>
+            <button type="reset">Нулирай</button>
+          </div>
+        </form>
       </div>
     </section>
     <footer class="text-center text-lg-start" style="background-color: #858585">
@@ -237,5 +253,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
