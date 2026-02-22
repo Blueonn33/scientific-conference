@@ -39,6 +39,26 @@ body {
 .table-regulation td {
   text-align: left;
 }
+.hr-white {
+  border: 0;
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    white 40%,
+    white 60%,
+    transparent 100%
+  );
+  border-radius: 0;
+  margin: 30px 0;
+}
+.d-flex {
+  justify-content: center;
+}
+.samples-container {
+  color: white;
+  text-align: center;
+}
 
 thead {
   text-align: center;
