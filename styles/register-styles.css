@@ -17,6 +17,10 @@ nav {
   height: 100%;
   flex: 1;
 }
+.d-flex {
+  justify-content: center;
+}
+
 @media (max-width: 1200px) {
   /* .centered-top {
     position: absolute;
