@@ -196,61 +196,14 @@
         <hr class="hr-white" />
       </div>
     </section>
-    <footer class="text-center text-lg-start" style="background-color: #858585">
-      <div class="container d-flex justify-content-center py-5">
-        <button
-          type="button"
-          class="btn btn-primary btn-lg btn-floating mx-2 fs-5"
-          style="background-color: #54456b"
-        >
-          <a
-            class="text-white"
-            href="https://www.facebook.com/martin.marinov.1717"
-            target="_blank"
-            ><i class="fa fa-facebook-f"></i
-          ></a>
-        </button>
-        <button
-          type="button"
-          class="btn btn-primary btn-lg btn-floating mx-2"
-          style="background-color: #54456b"
-        >
-          <a
-            href="https://www.youtube.com/@Mansor_17"
-            class="text-white"
-            target="_blank"
-            ><i class="fa fa-youtube"></i
-          ></a>
-        </button>
-        <button
-          type="button"
-          class="btn btn-primary btn-lg btn-floating mx-2"
-          style="background-color: #54456b"
-        >
-          <i class="fa fa-instagram"></i>
-        </button>
-        <button
-          type="button"
-          class="btn btn-primary btn-lg btn-floating mx-2"
-          style="background-color: #54456b"
-        >
-          <i class="fa fa-github"></i>
-        </button>
-        <button
-          type="button"
-          class="btn btn-primary btn-lg btn-floating mx-2"
-          style="background-color: #54456b"
-        >
-          <i class="fa fa-linkedin"></i>
-        </button>
-      </div>
-      <div
-        class="text-center text-white p-3"
-        style="background-color: rgba(0, 0, 0, 0.2)"
-      >
-        © 2026 Изработил: Мартин Маринов
-      </div>
-    </footer>
+    <div id="footer"></div>
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("footer").innerHTML = html;
+        });
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
