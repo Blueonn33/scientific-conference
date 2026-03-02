@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="bg">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Научна конференция</title>
+    <title>Награди | Научна конференция</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
     />
     <link href="styles/styles.css" rel="stylesheet" />
     <link href="styles/awards-styles.css" rel="stylesheet" />
@@ -17,66 +16,57 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
+
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-white custom-navbar">
-      <div class="container container-fluid">
-        <div class="container-logo">
-          <a class="navbar-brand me-0 p-5" href="index.html"
-            ><img
-              src="images/fmi-logo.png"
-              width="50"
-              height="auto"
-              class="d-inline-block align-text-top"
-          /></a>
-        </div>
-        <div class="flex-container">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Начало</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="register.html">Регистрация</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="schedule.html">График</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="dates.html">Важни дати</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="awards.html"
-                  >Награди</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="regulation.html">Регламент</a>
-              </li>
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+      <div class="container">
+        <a class="navbar-brand px-3" href="index.html">
+          <img
+            src="images/fmi-logo.png"
+            width="45"
+            height="auto"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Начало</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Регистрация</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="schedule.html">График</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dates.html">Важни дати</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="awards.html"
+                >Награди</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="regulation.html">Регламент</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
-    <section>
-      <div class="home-image-container">
-        <img src="images/home-background.jpg" class="img-fluid" />
-      </div>
-      <div class="centered-top">
-        <ul class="list-group">
+
+    <section class="hero-awards">
+      <img src="images/home-background.jpg" alt="background" />
+      <div class="awards-list-wrapper container">
+        <ul class="list-group shadow-lg">
           <li class="list-group-item list-group-item-primary">
             <strong>Награда за теоретично изследване</strong> - разработка с
             доказани научно-теоретични достойнства, научен стил и структура
@@ -102,40 +92,35 @@
         </ul>
       </div>
     </section>
-    <section class="awards-judge-container centered text-white">
-      <h4 class="awards-judge-heading my-5">Програмен комитет и жури</h4>
-      <div class="awards-judge-grid">
-        <div class="awards-judge-flex">
-          <div class="judge-row mb-3">
-            <strong>Председател: </strong>
-            <span>доц. д-р Златко Георгиев Върбанов</span>
-          </div>
-          <div class="judge-row">
-            <p class="mb-3 pe-3"><strong>Членове:</strong></p>
-            <span
-              ><ol class="list-group list-group-numbered">
-                <li class="list-group-item">
-                  проф. д-р Марияна Иванова Николова
-                </li>
-                <li class="list-group-item">проф. д-р Валентин Пенев Бакоев</li>
-                <li class="list-group-item">
-                  доц. д-р Юлиана Стоянова Дошкова-Тодорова
-                </li>
-                <li class="list-group-item">
-                  доц. д-р Тихомир Стефанов Стефанов
-                </li>
-              </ol></span
-            >
-          </div>
+
+    <section class="awards-judge-section">
+      <div class="container judge-container">
+        <h2 class="awards-judge-heading">Програмен комитет и жури</h2>
+
+        <div class="judge-card">
+          <p><strong>Председател:</strong> доц. д-р Златко Георгиев Върбанов</p>
+
+          <p class="mt-4"><strong>Членове:</strong></p>
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item">проф. д-р Марияна Иванова Николова</li>
+            <li class="list-group-item">проф. д-р Валентин Пенев Бакоев</li>
+            <li class="list-group-item">
+              доц. д-р Юлиана Стоянова Дошкова-Тодорова
+            </li>
+            <li class="list-group-item">доц. д-р Тихомир Стефанов Стефанов</li>
+          </ol>
         </div>
       </div>
     </section>
-    <section class="mt-5 pb-5 ranking-image">
-      <div class="ranking-image-container container">
-        <img src="images/ranking.png" class="img-fluid" />
+
+    <section class="ranking-section">
+      <div class="container ranking-image-container">
+        <img src="images/ranking.png" class="img-fluid ranking-img" />
       </div>
     </section>
+
     <div id="footer"></div>
+
     <script>
       fetch("footer.html")
         .then((response) => response.text())
@@ -143,10 +128,7 @@
           document.getElementById("footer").innerHTML = html;
         });
     </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
