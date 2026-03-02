@@ -1,199 +1,206 @@
 <!doctype html>
-<html lang="en">
+<html lang="bg">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Научна конференция</title>
+    <title>Регистрация | Научна конференция</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
     />
+
     <link href="styles/styles.css" rel="stylesheet" />
     <link href="styles/register-styles.css" rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
+
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-white custom-navbar">
-      <div class="container container-fluid">
-        <div class="container-logo">
-          <a class="navbar-brand me-0 p-5" href="index.html"
-            ><img
-              src="images/fmi-logo.png"
-              width="50"
-              height="auto"
-              class="d-inline-block align-text-top"
-          /></a>
-        </div>
-        <div class="flex-container">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Начало</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="register.html"
-                  >Регистрация</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="schedule.html">График</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="dates.html">Важни дати</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="awards.html">Награди</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="regulation.html">Регламент</a>
-              </li>
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand-lg custom-navbar bg-light">
+      <div class="container">
+        <a class="navbar-brand px-3" href="index.html">
+          <img
+            src="images/fmi-logo.png"
+            width="45"
+            height="auto"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Начало</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="register.html">Регистрация</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="schedule.html">График</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dates.html">Важни дати</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="awards.html">Награди</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="regulation.html">Регламент</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
+
     <section class="register-wrapper">
-      <div class="centered">
-        <!-- <img src="images/home-background.jpg" class="img-fluid" /> -->
+      <div class="container form-container">
+        <h1 class="form-title text-center mb-4">Регистрация за участие</h1>
+
         <form id="contactForm">
-          <div class="mb-3">
-            <label for="name" class="form-label text-white"
-              >Име, презиме, фамилия на автора</label
+          <div class="row g-3">
+            <div class="col-12">
+              <!-- <label class="form-label">Име, презиме, фамилия</label> -->
+              <div class="row g-2">
+                <div class="col-12 col-md-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Име"
+                    required
+                  />
+                </div>
+                <div class="col-12 col-md-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Презиме"
+                    required
+                  />
+                </div>
+                <div class="col-12 col-md-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Фамилия"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <select class="form-select" required>
+                <option value="" disabled selected hidden>
+                  Статут на участника
+                </option>
+                <option>студент-бакалавър</option>
+                <option>студент-магистър</option>
+                <option>докторант</option>
+                <option>млад учен</option>
+              </select>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Специалност"
+                required
+              />
+            </div>
+
+            <div class="col-12 col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Учебна институция"
+                required
+              />
+            </div>
+
+            <div class="col-12 col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Научен консултант"
+                required
+              />
+            </div>
+
+            <div class="col-12">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Тема на научния доклад"
+                required
+              />
+            </div>
+
+            <div class="col-12 col-md-6">
+              <select class="form-select" required>
+                <option value="" disabled selected hidden>
+                  Тематично направление
+                </option>
+                <option>Информатика и компютърни науки</option>
+                <option>Математика и приложна математика</option>
+                <option>Обучение по математика и информатика</option>
+              </select>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Необходим софтуерен продукт"
+                required
+              />
+            </div>
+
+            <div class="col-12">
+              <textarea
+                class="form-control"
+                rows="4"
+                placeholder="Резюме на научния доклад"
+                required
+              ></textarea>
+            </div>
+
+            <div
+              class="col-12 d-flex register-d-flex justify-content-center gap-3 mt-4"
             >
-            <input
-              type="text"
-              class="form-control my-1"
-              id="first-name"
-              required
-            />
-            <input
-              type="text"
-              class="form-control my-1"
-              id="surname"
-              required
-            />
-            <input
-              type="text"
-              class="form-control my-1"
-              id="last-name"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <select id="status" class="form-select" required>
-              <option value="" disabled selected hidden>
-                Статут на участника
-              </option>
-              <option value="студент-бакалавър">студент-бакалавър</option>
-              <option value="студент-магистър">студент-магистър</option>
-              <option value="докторант">докторант</option>
-              <option value="млад учен">млад учен</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="speciality" class="form-label text-white"
-              >Специалност</label
-            >
-            <input
-              type="text"
-              class="form-control my-1"
-              id="speciality"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="institution" class="form-label text-white"
-              >Учебна институция</label
-            >
-            <input
-              type="text"
-              class="form-control my-1"
-              id="institution"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="topic" class="form-label text-white"
-              >Тема на научния доклад</label
-            >
-            <input type="text" class="form-control my-1" id="topic" required />
-          </div>
-          <div class="mb-3">
-            <label for="consultant" class="form-label text-white"
-              >Научен консултант</label
-            >
-            <input
-              type="text"
-              class="form-control my-1"
-              id="consultant"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <select id="thematic-direction" class="form-select" required>
-              <option value="" disabled selected hidden>
-                Тематично направление
-              </option>
-              <option value="Информатика и компютърни науки">
-                Информатика и компютърни науки
-              </option>
-              <option value="Математика и приложна математика">
-                Математика и приложна математика
-              </option>
-              <option value="Обучение по математика и информатика">
-                Обучение по математика и информатика
-              </option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="summary" class="form-label text-light"
-              >Резюме на научния доклад</label
-            >
-            <textarea
-              class="form-control"
-              id="summary"
-              rows="3"
-              required
-            ></textarea>
-          </div>
-          <div class="mb-3">
-            <label for="software" class="form-label text-white"
-              >Необходим софтуерен продукт за представяне на доклада</label
-            >
-            <input
-              type="text"
-              class="form-control my-1"
-              id="software"
-              required
-            />
-          </div>
-          <div class="d-flex gap-3 my-5">
-            <button type="submit" class="btn btn-primary">Изпрати</button>
-            <button type="reset" class="btn btn-secondary">Нулирай</button>
+              <button
+                type="submit"
+                class="btn btn-primary register-btn-primary register-btn px-4"
+              >
+                Изпрати
+              </button>
+              <button
+                type="reset"
+                class="btn btn-outline-secondary register-btn-outline-secondary register-btn px-4"
+              >
+                Нулирай
+              </button>
+            </div>
           </div>
         </form>
       </div>
     </section>
+
     <div id="footer"></div>
+
     <script>
       fetch("footer.html")
         .then((response) => response.text())
@@ -201,11 +208,8 @@
           document.getElementById("footer").innerHTML = html;
         });
     </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="script.js"></script>
   </body>
 </html>
