@@ -2,15 +2,21 @@ body {
   background-color: #736699;
 }
 
-.regulation {
+.regulation-page {
+  width: 100%;
+}
+
+.hero-section {
   position: relative;
+  width: 100%;
   min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-.regulation-image {
+.hero-image {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -18,27 +24,41 @@ body {
   object-fit: cover;
 }
 
-.centered-top {
+.hero-content {
   position: relative;
-  width: 70%;
-  max-width: 1000px;
   z-index: 2;
+  max-width: 1000px;
+  width: 100%;
+  padding: 2rem 1rem;
 }
 
-.regulation-container .list-group {
-  text-align: left;
-  width: 100%;
+.list-group-item {
+  font-size: 1rem;
+}
+
+.table-section {
+  padding: 3rem 1rem;
+}
+
+.table-regulation {
+  background-color: #ffffff;
+}
+
+.table-regulation thead {
+  text-align: center;
+}
+
+.table-regulation td,
+.table-regulation th {
+  vertical-align: top;
 }
 
 .table-regulation ol {
   list-style-type: none;
   padding-left: 0;
-  text-align: left;
+  margin-bottom: 0;
 }
 
-.table-regulation td {
-  text-align: left;
-}
 .hr-white {
   border: 0;
   height: 6px;
@@ -49,57 +69,43 @@ body {
     white 60%,
     transparent 100%
   );
-  border-radius: 0;
-  margin: 30px 0;
+  margin: 2.5rem 0;
 }
-.d-flex {
-  justify-content: center;
-}
+
 .samples-container {
-  color: white;
   text-align: center;
+  color: #ffffff;
 }
 
-thead {
-  text-align: center;
+.samples-container h3 {
+  margin-bottom: 1.5rem;
 }
 
-@media (max-width: 1200px) {
-  .centered-top {
-    width: 80%;
-  }
+.buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 @media (max-width: 992px) {
-  .centered-top {
-    width: 85%;
+  .hero-section {
+    min-height: 50vh;
+  }
+
+  .hero-content {
+    padding: 1.5rem 1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .regulation {
-    min-height: 50vh;
+  body {
+    padding-top: 70px;
+  }
+
+  .hero-section {
+    min-height: 45vh;
     padding: 2rem 0;
-  }
-
-  .centered-top {
-    width: 90%;
-  }
-}
-
-@media (max-width: 576px) {
-  .regulation {
-    min-height: auto;
-    padding: 3rem 0;
-  }
-
-  .regulation-image {
-    height: 100%;
-  }
-
-  .centered-top {
-    width: 95%;
-    margin-top: 10%;
   }
 
   .list-group-item {
@@ -110,11 +116,20 @@ thead {
   .table-regulation th {
     font-size: 0.9rem;
   }
+
+  .table-section {
+    padding: 2rem 0.5rem;
+  }
 }
 
-@media (max-width: 400px) {
-  .centered-top {
-    width: 95%;
+@media (max-width: 576px) {
+  .hero-section {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .hero-content {
+    padding: 1rem;
   }
 
   .list-group-item {
@@ -124,5 +139,25 @@ thead {
   .table-regulation td,
   .table-regulation th {
     font-size: 0.85rem;
+  }
+
+  .buttons-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons-wrapper .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-content {
+    max-width: 1100px;
+  }
+
+  .table-section {
+    max-width: 1200px;
   }
 }
