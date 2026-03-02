@@ -1,90 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.navbar-brand {
+  background-color: white;
+  border-radius: 10px;
+}
+.custom-navbar {
+  /* backdrop-filter: blur(6px); */
+  padding: 10px 20px;
+}
+
+.navbar-nav .nav-link {
+  color: #333;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #cbb6ff;
+}
+
 .home-image-container {
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: clamp(20px, 5vw, 60px);
   overflow: hidden;
-  height: auto;
 }
+
 .home-image-container img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -2;
 }
-.centered {
+
+.home-image-container::after {
+  content: "";
   position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  width: 75%;
+  inset: 0;
+  /* background: rgba(0, 0, 0, 0.6); */
+  z-index: -1;
 }
-.centered .index-heading {
-  font-size: 2.8rem;
+
+.centered {
+  max-width: 1200px;
+  width: 100%;
+  color: #333;
+}
+.index-heading {
+  color: #9f8dce;
+}
+
+.index-heading {
   font-weight: 700;
-  color: #736699;
   text-transform: uppercase;
+  font-size: clamp(1.8rem, 4vw, 4rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
-.centered .index-subheading {
-  font-size: 1.6rem;
-  color: #4e4e4e;
+
+.index-subheading {
+  font-size: clamp(1.1rem, 2.5vw, 2rem);
+  margin-bottom: 1rem;
 }
-.centered .index-subheading-info {
-  font-size: 1.3rem;
-  color: #4e4e4e;
+
+.index-subheading-info {
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
+
+.invitation-container {
+  padding: clamp(20px, 4vw, 50px);
+}
+
 .grid-cards {
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
+  padding: clamp(40px, 6vw, 80px) 20px;
 }
+
 .card {
-  transition: 0.3s;
   border: none;
-  border-radius: 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+  padding: 10px;
 }
+
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
+
+.card-body {
+  padding: clamp(20px, 3vw, 30px);
+}
+
+.card-body i {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #9f8dce;
+}
+
+.card-title {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+}
+
 .grid-card-link {
   text-decoration: none;
   color: inherit;
 }
-.card-body i {
-  color: #54456b;
-}
-.invitation-container {
-  text-align: center;
-  padding: 60px 20px;
-}
-.invitation-container h3 {
-  margin-bottom: 20px;
-  font-weight: 600;
-}
 
 @media (max-width: 992px) {
-  .centered .index-heading {
-    font-size: 2rem;
-  }
-
-  .centered .index-subheading {
-    font-size: 1rem;
-  }
-
   .navbar-collapse {
-    padding: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
     border-radius: 10px;
+    border: 3px solid #9f8dce;
   }
 }
+
 @media (max-width: 576px) {
-  .centered .index-heading {
-    font-size: 1.6rem;
-  }
-
-  .centered .index-subheading {
-    font-size: 0.9rem;
-  }
-
   .home-image-container {
-    height: 80vh;
+    min-height: 90vh;
+  }
+
+  .index-heading {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
   }
 }
