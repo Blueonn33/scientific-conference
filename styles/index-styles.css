@@ -81,6 +81,7 @@ body {
 
 .grid-cards {
   padding: clamp(40px, 6vw, 80px) 20px;
+  background-color: #9f8dce;
 }
 
 .card {
