@@ -80,6 +80,28 @@ textarea.form-control {
   padding: 10px 30px;
 }
 
+.autocomplete-list {
+  position: absolute;
+  background: white;
+  width: 30%;
+  min-width: 330px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.autocomplete-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.autocomplete-item:hover {
+  background: #f1f1f1;
+}
+
 @media (max-width: 992px) {
   .navbar-collapse {
     background: rgba(255, 255, 255, 0.95);
