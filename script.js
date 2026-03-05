@@ -153,6 +153,7 @@ form.addEventListener("submit", (e) => {
   const firstName = document.getElementById("first-name").value;
   const surname = document.getElementById("surname").value;
   const lastName = document.getElementById("last-name").value;
+  const email = document.getElementById("email").value;
   const status = document.getElementById("status").value;
   const speciality = document.getElementById("speciality").value;
   const institution = document.getElementById("institution").value;
@@ -166,6 +167,7 @@ form.addEventListener("submit", (e) => {
     firstName,
     surname,
     lastName,
+    email,
     status,
     speciality,
     institution,
@@ -178,5 +180,5 @@ form.addEventListener("submit", (e) => {
   });
 
   form.reset();
-  alert("Изпратено успешно!");
+  alert("Регистрацията е успешна!");
 });
