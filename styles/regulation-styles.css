@@ -166,3 +166,34 @@ body {
     max-width: 1200px;
   }
 }
+
+.info-section .card {
+  border-radius: 1rem;
+}
+
+.info-section h3 {
+  color: #736699;
+  font-weight: 600;
+}
+
+.info-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.qr-image {
+  max-width: 180px;
+  border-radius: 10px;
+  padding: 5px;
+  border: 5px solid #736699;
+}
+
+@media (max-width: 768px) {
+  .info-section .card-body {
+    text-align: center;
+  }
+
+  .qr-image {
+    max-width: 140px;
+  }
+}
