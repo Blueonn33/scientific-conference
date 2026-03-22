@@ -147,7 +147,9 @@ institutionInput.addEventListener("input", () => {
   });
 });
 
-form.addEventListener("submit", (e) => {
+emailjs.init("LBAbo1gGIKSnvuoyS");
+
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const firstName = document.getElementById("first-name").value;
@@ -163,22 +165,40 @@ form.addEventListener("submit", (e) => {
   const summary = document.getElementById("summary").value;
   const software = document.getElementById("software").value;
 
-  push(ref(db, "messages"), {
-    firstName,
-    surname,
-    lastName,
-    email,
-    status,
-    speciality,
-    institution,
-    topic,
-    consultant,
-    thematicDirection,
-    summary,
-    software,
-    timestamp: new Date().toLocaleDateString("bg-BG"),
-  });
+  try {
+    await push(ref(db, "messages"), {
+      firstName,
+      surname,
+      lastName,
+      email,
+      status,
+      speciality,
+      institution,
+      topic,
+      consultant,
+      thematicDirection,
+      summary,
+      software,
+      timestamp: new Date().toLocaleDateString("bg-BG"),
+    });
 
-  form.reset();
-  alert("Регистрацията е успешна!");
+    const res1 = await emailjs.send("service_j11wjgd", "template_z1roioc", {
+      email: email,
+      name: firstName,
+    });
+
+    const res2 = await emailjs.send("service_j11wjgd", "template_77e3c43", {
+      name: firstName,
+      institution: institution,
+    });
+
+    console.log("Email 1:", res1.status, res1.text);
+    console.log("Email 2:", res2.status, res2.text);
+
+    alert("Регистрацията е успешна!");
+    form.reset();
+  } catch (error) {
+    console.error("Email error:", error);
+    alert("Грешка при изпращане на имейл!");
+  }
 });
