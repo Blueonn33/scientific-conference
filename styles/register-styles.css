@@ -101,6 +101,19 @@ textarea.form-control {
 .autocomplete-item:hover {
   background: #f1f1f1;
 }
+.btn-participants {
+  background-color: #a487fd;
+  color: white;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-participants:hover {
+  transform: translateY(-2px);
+  background-color: #876fd0;
+  color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
 
 @media (max-width: 768px) {
   .register-wrapper {
