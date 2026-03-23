@@ -161,6 +161,9 @@ form.addEventListener("submit", async (e) => {
   const institution = document.getElementById("institution").value;
   const topic = document.getElementById("topic").value;
   const consultant = document.getElementById("consultant").value;
+  const consultantOptional = document.getElementById(
+    "consultant-optional",
+  ).value;
   const thematicDirection = document.getElementById("thematic-direction").value;
   const summary = document.getElementById("summary").value;
   const software = document.getElementById("software").value;
@@ -176,6 +179,7 @@ form.addEventListener("submit", async (e) => {
       institution,
       topic,
       consultant,
+      consultantOptional,
       thematicDirection,
       summary,
       software,
