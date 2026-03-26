@@ -165,7 +165,6 @@ form.addEventListener("submit", async (e) => {
     "consultant-optional",
   ).value;
   const thematicDirection = document.getElementById("thematic-direction").value;
-  const summary = document.getElementById("summary").value;
   const software = document.getElementById("software").value;
 
   await push(ref(db, "messages"), {
@@ -180,7 +179,6 @@ form.addEventListener("submit", async (e) => {
     consultant,
     consultantOptional,
     thematicDirection,
-    summary,
     software,
     timestamp: new Date().toLocaleDateString("bg-BG"),
   });
