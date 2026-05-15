@@ -188,25 +188,4 @@ form.addEventListener("submit", async (e) => {
 
   alert("Регистрацията е успешна!");
   form.reset();
-
-  // try {
-  //   const res1 = await emailjs.send("service_j11wjgd", "template_z1roioc", {
-  //     email: email,
-  //     name: firstName,
-  //   });
-
-  //   const res2 = await emailjs.send("service_j11wjgd", "template_77e3c43", {
-  //     name: firstName,
-  //     institution: institution,
-  //   });
-
-  //   console.log("Email 1:", res1.status, res1.text);
-  //   console.log("Email 2:", res2.status, res2.text);
-
-  //   alert("Регистрацията е успешна!");
-  //   form.reset();
-  // } catch (error) {
-  //   console.error("Email error:", error);
-  //   alert("Грешка при изпращане на имейл!");
-  // }
 });
