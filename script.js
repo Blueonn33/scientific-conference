@@ -150,8 +150,6 @@ institutionInput.addEventListener("input", () => {
   });
 });
 
-// emailjs.init("LBAbo1gGIKSnvuoyS");
-
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
