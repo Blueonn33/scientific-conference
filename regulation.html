@@ -18,54 +18,15 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
-      <div class="container">
-        <a class="navbar-brand px-3" href="index.html">
-          <img
-            src="images/fmi-logo.png"
-            width="45"
-            height="auto"
-            class="d-inline-block align-text-top"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto text-center">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Начало</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="register.html">Регистрация</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="schedule.html">График</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="dates.html">Важни дати</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="awards.html">Награди</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="regulation.html"
-                >Регламент</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="navigation"></div>
 
+    <script>
+      fetch("navigation.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("navigation").innerHTML = html;
+        });
+    </script>
     <main class="regulation-page">
       <section class="hero-section">
         <img src="images/home-background.jpg" class="hero-image" />
