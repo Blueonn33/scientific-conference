@@ -150,8 +150,62 @@ institutionInput.addEventListener("input", () => {
   });
 });
 
+function markValidity(input, isValid) {
+  input.classList.remove("is-valid", "is-invalid");
+  input.classList.add(isValid ? "is-valid" : "is-invalid");
+}
+
+function validateName(input) {
+  const regex = /^[А-Яа-яA-Za-z]{2,}$/;
+  const valid = regex.test(input.value.trim());
+  markValidity(input, valid);
+  return valid;
+}
+
+function validateEmail(input) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const valid = regex.test(input.value.trim());
+  markValidity(input, valid);
+  return valid;
+}
+
+function validateText(input, min = 3) {
+  const valid = input.value.trim().length >= min;
+  markValidity(input, valid);
+  return valid;
+}
+
+function validateSelect(select) {
+  const valid = select.value !== "";
+  markValidity(select, valid);
+  return valid;
+}
+
+function validateConsultant(input) {
+  const valid = input.value.trim().length >= 5;
+  markValidity(input, valid);
+  return valid;
+}
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+  let valid = true;
+
+  valid &= validateName(document.getElementById("first-name"));
+  valid &= validateName(document.getElementById("last-name"));
+  valid &= validateEmail(document.getElementById("email"));
+  valid &= validateSelect(document.getElementById("status"));
+  valid &= validateText(document.getElementById("speciality"));
+  valid &= validateText(document.getElementById("institution"));
+  valid &= validateConsultant(document.getElementById("consultant"));
+  valid &= validateText(document.getElementById("topic"));
+  valid &= validateSelect(document.getElementById("thematic-direction"));
+
+  if (!valid) {
+    alert("Моля, попълнете всички задължителни полета коректно.");
+    return;
+  }
 
   const firstName = document.getElementById("first-name").value;
   const surname = document.getElementById("surname").value;
@@ -186,4 +240,8 @@ form.addEventListener("submit", async (e) => {
 
   alert("Регистрацията е успешна!");
   form.reset();
+
+  document.querySelectorAll(".is-valid, .is-invalid").forEach((el) => {
+    el.classList.remove("is-valid", "is-invalid");
+  });
 });
